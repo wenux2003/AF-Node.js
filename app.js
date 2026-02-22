@@ -10,3 +10,5 @@ async function myFunction() {
 }
 
 myFunction();
+
+console.log("Collaboration feature added!");
