@@ -1,8 +1,9 @@
 console.log("Hello testing 1 ...");
 
-const fs = require('fs');
+const http = require('http');
 
-fs.writeFile('file.txt', 'Hello hello world!', function (err) {
-  if (err) throw err;
-  console.log('File saved!');
-});
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write('this is created server at port 8080 !');
+  res.end();
+}).listen(8080);
