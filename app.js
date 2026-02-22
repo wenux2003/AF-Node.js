@@ -2,7 +2,7 @@ console.log("Hello testing 1 ...");
 
 const fs = require('fs');
 
-fs.readFile('file.txt', 'utf8', function (err, data) {
+fs.writeFile('file.txt', 'Hello hello world!', function (err) {
   if (err) throw err;
-  console.log(data);
+  console.log('File saved!');
 });
